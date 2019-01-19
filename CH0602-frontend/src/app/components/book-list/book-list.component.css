@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+
+tr th, tr td{
+    padding: 20px 5px;
+    text-align: center;
+}
+
+tr th {
+    border-bottom: 1px solid #dedede;
+}
+
+table tr:nth-child(odd){
+    background-color: #fafafa;
+}

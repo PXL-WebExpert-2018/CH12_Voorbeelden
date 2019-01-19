@@ -1,0 +1,7 @@
+<app-add-book   (createBoek)="fetchList()"></app-add-book>
+<app-book-list  [bookList$]="bookList$" 
+                (listChanged)="fetchList()"
+                (newEdit)="newEdit($event)"></app-book-list> 
+<app-edit-book  *ngIf="editBoek" 
+                [editBoek]="editBoek"
+                (editFinished)="finishEdit()"></app-edit-book>

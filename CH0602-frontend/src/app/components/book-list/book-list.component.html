@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Titel</th>
+    <th>Auteur</th>
+    <th>ISBN nummer</th>
+    <th>Datum uitgave</th>
+    <th>Acties</th>
+  </tr>
+  <tr *ngFor="let boek of bookList$ | async">
+    <td>{{boek.titel}}</td>
+    <td>{{boek.auteur}}</td>
+    <td>{{boek.isbn}}</td>
+    <td>{{boek.date}}</td>
+    <td>
+      <button (click)="edit(boek)">edit</button>
+      <button (click)="delete(boek)">delete</button>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,25 @@
+<div class="modal">
+  <h1>Boek wijzigen</h1>
+    <form [formGroup]="editBoekForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <label for="titel">Titel:</label>
+            <input type="text" name="titel" id="titel" formControlName="titel" />
+        </div>
+        <div class="row">
+            <label for="auteur">Auteur:</label>
+            <input type="text" name="auteur" id="auteur" formControlName="auteur" />
+        </div>
+        <div class="row">
+            <label for="isbn">ISBN:</label>
+            <input type="text" name="isbn" id="isbn" formControlName="isbn" />
+        </div>
+        <div class="row">
+            <label for="date">Datum uitgave:</label>
+            <input type="date" name="date" id="date" formControlName="date" />
+        </div>
+    
+        <div class="row">
+          <input type="submit" value="Opslaan" name="add" />
+        </div>
+    </form>
+</div>
