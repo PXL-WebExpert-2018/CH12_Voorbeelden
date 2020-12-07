@@ -1,11 +1,11 @@
 // server.js - applicatie voor het ophalen en
 // opslaan van boeken in MongoDB
-var express = require('express');
-var bodyParser = require('body-parser');
-var db = require('./db');
-var Boek = require('./models/boeken');
+const express = require('express');
+const bodyParser = require('body-parser');
+const db = require('./db');
+const Boek = require('./models/boeken');
 
-var app = express();
+const app = express();
 
 app.use(bodyParser.json());
 
@@ -18,7 +18,7 @@ app.get('/api', function (req, res) {
 // 2. POST-endpoint: nieuw boek in de database plaatsen.
 app.post('/api/boeken', function (req, res, next) {
 	// 2a. nieuw boekobject maken.
-	var boek = new Boek({
+	let boek = new Boek({
 		titel : req.body.titel,
 		auteur: req.body.auteur,
 		isbn  : req.body.isbn

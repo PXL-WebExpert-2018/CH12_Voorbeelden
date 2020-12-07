@@ -1,13 +1,13 @@
 // server.js - app voor boeken in MongoDB
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-var routes = require('./routes');
+const routes = require('./routes');
 
-var app = express();
+const app = express();
 
 // configuratie van body-parser
-app.use(bodyParser.json());
+app.use(express.json());
 
 // nodig voor de toegang vanuit onze angular applicatie - CORS
 app.use(function(req, res, next){

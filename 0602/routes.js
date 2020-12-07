@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var db = require('./db');
-var Boek = require('./models/boeken');
+const express = require('express');
+const router = express.Router();
+const db = require('./db');
+const Boek = require('./models/boeken');
 
 router.get('/', (req, res) => {
     //TODO: uitleg gebruik API
@@ -48,21 +48,6 @@ router.delete('/boeken/:id', (req, res) => {
         
         res.json(removed);
 
-    });
-});
-
-router.post('/boeken', (req, res) => {
-    let boek = new Boek({
-        titel: req.body.titel,
-        auteur: req.body.auteur,
-        isbn: req.body.isbn
-    });
-
-    boek.save((err, boek) => {
-        if(err)
-            res.send(err);
-
-        res.json(boek);
     });
 });
 

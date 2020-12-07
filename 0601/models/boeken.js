@@ -1,5 +1,5 @@
 // boeken.js : Model voor boeken in MongoDB-database
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const boekSchema = mongoose.Schema({
 	titel : {type: String, required: true},
@@ -8,5 +8,5 @@ const boekSchema = mongoose.Schema({
 	date  : {type: Date, required: true, default: Date.now}
 });
 
-var Boek = mongoose.model('Boek', boekSchema);
+let Boek = mongoose.model('Boek', boekSchema);
 module.exports = Boek;
